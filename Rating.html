@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating toko</title>
+</head>
+<body>
+    <h1>Berikan rating pada toko</h1>
+    <form action="proses_rating.php" method="post">
+        <label for="toko_id">ID Toko:</label>
+        <input type="text" name="toko_id" required><br>
+        <label for ="user_id" >ID Pengguna</label>
+        <input type="text" name="user_id" required>
+        <label for ="rating">Rating</label>
+        <input type="number" name ="rating" min="1" max="5" required>
+        <label for="ulasan">ulasan:</label>
+        <textarea name="ulasan"></textarea><br>
+        <button type="submit">kirim rating</button>
+    </form>
+    
+</body>
+</html>

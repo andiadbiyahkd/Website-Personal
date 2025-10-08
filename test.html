@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efek Hover pada List</title>
+    <style>
+        ul {
+            list-style-type: none; /* Menghilangkan bullet point */
+            padding: 0;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        li a {
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #007bff;
+            transition: transform 0.2s ease-in-out;
+            display: inline-block; /* Agar transform bekerja dengan baik */
+        }
+
+        li a:hover {
+            transform: scale(1.1); /* Membesarkan sedikit */
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="halaman1.html">Halaman 1</a></li>
+        <li><a href="halaman2.html">Halaman 2</a></li>
+        <li><a href="halaman3.html">Halaman 3</a></li>
+    </ul>
+</body>
+</html>

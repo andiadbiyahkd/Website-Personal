@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JustBuy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            background-image: url(image/Benedetta.jpeg);
+            background-size: cover;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px 20px;
+            background-color: rgba(6, 21, 89, 0.8);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #fff;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            padding-top: 30px;
+            gap: 30px;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(4px);
+            padding: 20px;
+            width: 30%;
+            min-height: 500px;
+            border-radius: 8px;
+            color: #ddd;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+            margin: 0 5px;
+        }
+
+        h2 {
+            color: #00BFFF;
+        }
+
+        footer {
+            background-color: rgba(6, 21, 89, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        p,
+        li {
+            color: #ffffff;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .container {
+                width: 90%;
+                min-height: auto;
+            }
+        }
+
+        li:hover {
+            color: #00BFFF;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <!-- Logo di kiri -->
+        <a href="home.php">
+            <img src="image/justbuy.png" alt="Logo JustBuy" style="width: 130px; height: auto;">
+        </a>
+        <!-- Teks di tengah -->
+        <h1>Panduan Jual Beli Akun</h1>
+    </header>
+
+    <div class="wrapper">
+        <!-- Container untuk Tata Cara Membeli Akun -->
+        <div class="container left">
+            <section>
+                <h2>Tata Cara Membeli Akun</h2>
+                <p>Ikuti langkah-langkah berikut untuk membeli akun game dengan aman:</p>
+                <ul>
+                    <li>Telusuri akun game yang tersedia dan pilih yang sesuai dengan keinginan Anda.</li>
+                    <li>Klik tombol "Beli" untuk memulai proses transaksi.</li>
+                    <li>Lakukan pembayaran ke akun escrow JustBuy.</li>
+                    <li>Tunggu verifikasi dari penjual dan periksa akun yang diterima.</li>
+                    <li>Konfirmasi transaksi jika akun sudah sesuai, dana akan dilepas kepada penjual.</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Container untuk Tata Cara Menjual Akun -->
+        <div class="container right">
+            <section>
+                <h2>Tata Cara Menjual Akun</h2>
+                <p>Berikut adalah langkah-langkah untuk menjual akun Anda di JustBuy:</p>
+                <ul>
+                    <li>Daftarkan akun game Anda dengan rincian lengkap dan harga yang diinginkan.</li>
+                    <li>Tunggu pembeli yang tertarik dan menerima notifikasi dari sistem.</li>
+                    <li>Setelah ada pembelian, lakukan verifikasi dan kirim data akun kepada pembeli.</li>
+                    <li>Dana akan dilepas kepada Anda setelah pembeli mengkonfirmasi penerimaan.</li>
+                    <li>Berikan layanan terbaik untuk meningkatkan rating Anda sebagai penjual.</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 JustBuy. Kelompok 5.</p>
+    </footer>
+
+</body>
+
+</html>

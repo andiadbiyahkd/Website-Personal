@@ -1,0 +1,94 @@
+ 
+ 
+
+/* Animasi untuk form keluar */
+@keyframes slideOut {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+}
+
+ 
+/* Menerapkan animasi saat form menghilang */
+#edit-profile-form.hide {
+    animation: slideOut 0.5s forwards;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#edit-profile-form.show {
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);  /* Mulai dari bawah */
+        opacity: 0;  /* Mulai dengan transparan */
+    }
+    to {
+        transform: translateY(0);  /* Bergerak ke posisi normal */
+        opacity: 1;  /* Menjadi sepenuhnya terlihat */
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(0);  /* Mulai dari posisi normal */
+        opacity: 1;  /* Mulai sepenuhnya terlihat */
+    }
+    to {
+        transform: translateY(20px);  /* Bergerak ke bawah */
+        opacity: 0;  /* Menghilang */
+    }
+}
+.main-content {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.9s ease-in-out;
+}
+#main-content.shrink {
+    transform: scale(0.9); /* Mengecilkan ukuran latar belakang */
+}
+
+/* Menambahkan animasi pemanjangan background saat tombol Edit Profil ditekan */
+#main-content.expand {
+    transform: scale(1000px); /* Memulihkan ukuran latar belakang */
+}
+/* Animasi untuk form saat Edit Profil */
+#form-container.show {
+    animation: slideUp 0.5s ease-out;
+}
+
+/* Animasi untuk form saat keluar */
+#form-container.hide {
+    animation: slideDown 0.5s ease-in;
+}
+
+/* Animasi untuk background saat Batal */
+#main-content.animate-bg {
+    animation: changeBackground 1s ease-in-out;
+}
+
+@keyframes changeBackground {
+    from {
+        background-color: #fff;  /* Warna latar belakang awal */
+    }
+    to {
+        background-color: #f0f0f0;  /* Warna latar belakang setelah animasi */
+    }
+}

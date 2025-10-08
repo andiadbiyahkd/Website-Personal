@@ -1,0 +1,402 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none; /* Menghilangkan garis bawah */
+}
+
+a:focus, a:hover {
+    text-decoration: none; /* Menghilangkan garis bawah saat link di-klik atau di-hover */
+}
+
+
+body {
+    background-color: rgba(6, 21, 89, 0.8);
+
+    color: #fff;
+}
+
+/* Sembunyikan checkbox */
+.sidebar-checkbox {
+    display: none;
+}
+
+/* Gaya untuk hamburger menu */
+.hamburger-menu {
+    font-size: 1.5rem;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    color: #fff;
+    z-index: 1001;
+}
+
+/* Gaya untuk sidebar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #2d2d2d;
+    overflow-x: hidden;
+    transition: width 0.3s;
+    padding-top: 60px;
+    z-index: 1002;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Tampilkan sidebar saat checkbox aktif */
+.sidebar-checkbox:checked ~ .sidebar {
+    width: 250px;
+}
+
+/* Gaya untuk tombol close di dalam sidebar */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+    z-index: 1003;
+    text-decoration: none;
+}
+
+.sidebar h1 {
+    font-size: 1.5rem;
+    color: #9e9e9e;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #bdbdbd;
+    cursor: pointer;
+}
+
+.sidebar ul li:hover {
+    background-color: #3d3d3d;
+}
+
+/* Gaya untuk ikon pada item sidebar */
+.menu-home::before {
+    content: "\1F3E0"; /* Unicode untuk ikon rumah 🏠 */
+    margin-right: 8px;
+}
+
+.menu-jual::before {
+    content: "\1FA99"; /* Unicode untuk jual */
+    margin-right: 8px;
+}
+
+.menu-Ppenjual::before {
+    content: "\1F4B0"; /* Unicode untuk profil penjual */
+    margin-right: 8px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Memusatkan elemen di tengah */
+    background-color: #333;
+    padding: 15px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    flex-direction: column; /* Menyusun elemen secara vertikal */
+    text-align: center; /* Teks rata tengah */
+}
+
+.navbar h1 {
+    font-size: 1.5rem;
+    color: #9e9e9e;
+    margin: 0;
+}
+
+.navbar .hamburger-menu {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.navbar p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin: 0;
+    margin-top: 5px; /* Jarak antara <h1> dan <p> */
+}
+
+/* Warna biru untuk logo */
+.blue {
+    color: #129cec;
+}
+
+/* Container Utama Kustom */
+#main-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px; /* Jarak untuk menghindari navbar fixed */
+    padding: 20px;
+}
+
+/* Main Content */
+.main-content {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.9s ease-in-out;
+}
+#main-content.shrink {
+    transform: scale(0.9); /* Mengecilkan ukuran latar belakang */
+}
+
+/* Menambahkan animasi pemanjangan background saat tombol Edit Profil ditekan */
+#main-content.expand {
+    transform: scale(1000px); /* Memulihkan ukuran latar belakang */
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    background-color: #6c6cff; /* Warna latar belakang lingkaran */
+    width: 60px; /* Ukuran lingkaran */
+    height: 60px; /* Ukuran lingkaran */
+    border-radius: 50%; /* Membuat bentuk lingkaran */
+    display: flex;
+    align-items: center; /* Vertikal tengah */
+    justify-content: center; /* Horizontal tengah */
+    font-size: 1.5rem; /* Ukuran font untuk dua huruf pertama */
+    font-weight: bold; /* Menguatkan font */
+    color: #fff; /* Warna teks */
+    margin-right: 15px; /* Spasi di sebelah kanan */
+    object-fit: cover; /* Memastikan gambar tetap proporsional */
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Memastikan gambar berbentuk lingkaran */
+    object-fit: cover; /* Mengatur gambar agar tidak terdistorsi */
+}
+
+
+.profile-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+/* Gaya untuk tombol Edit Profile */
+.edit-button {
+    display: inline-block;
+    background-color: #5a5aff;
+
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.edit-button:hover {
+    background-color:#061559; 
+}
+
+.edit-button:active {
+    background-color: rgba(6, 21, 89, 0.8);
+    transform: scale(0.95);
+}
+
+.profile-details {
+    margin-bottom: 20px;
+}
+.success-message {
+    color: white;
+    background-color: green;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.profile-details p {
+    font-size: 1rem;
+    color: #ccc;
+}
+/* Memberikan jarak pada input foto profil */
+#new-profile-picture {
+    margin-bottom: 15px; /* Menambahkan jarak bawah */
+}
+
+/* Memberikan jarak pada tombol simpan perubahan */
+button[type="submit"] {
+    margin-top: 20px; /* Menambahkan jarak atas pada tombol */
+}
+/* Memberikan jarak pada tombol batal */
+button[type="button"] {
+    margin-top: 20px; /* Sama dengan tombol simpan perubahan */
+    margin-left: 10px; /* Memberikan sedikit jarak antara tombol batal dan simpan perubahan */
+}
+
+/* Menjaga kedua tombol berada dalam satu baris */
+form button {
+    display: inline-block;
+}
+
+.mulai-jual-btn {
+    display: inline-block;
+    background-color: #25D366; /* Warna hijau WhatsApp */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Sama dengan tombol simpan perubahan */
+    margin-left: 10px;
+}
+
+.btn-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column; /* Mengatur tombol-tombol dalam kolom */
+    gap: 40px; /* Jarak antar tombol */
+    margin-top: 20px;
+}
+
+.save-btn{
+    display: inline-block;
+    background-color: #5a5aff;
+
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+.save-btn:hover{
+    background-color:#061559; 
+}
+
+
+.mulai-jual-btn:hover {
+    background-color: #128C7E; /* Warna hijau lebih gelap saat hover */
+}
+
+.mulai-jual-btn:active {
+    background-color: #075E54; /* Warna hijau gelap saat tombol ditekan */
+}
+
+
+.mulai-jual-btn:hover {
+    background-color: #128C7E; /* Warna hijau lebih gelap saat hover */
+}
+
+.mulai-jual-btn:active {
+    background-color: #075E54; /* Warna hijau gelap saat tombol ditekan */
+}
+
+
+.orders-section h4 {
+    font-size: 1.2rem;
+    color: #9e9e9e;
+}
+
+.icon-phone:before {
+    content: "📞";
+    margin-right: 5px;
+}
+
+
+/* Animasi fade in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animasi fade out */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#alert-container {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.footer .footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.footer .footer-content div {
+    width: 30%;
+}
+.footer .footer-content img {
+    width: 100px;
+    height: auto;
+}
+.footer .footer-content ul {
+    list-style: none;
+    padding: 0;
+}
+.footer .footer-content .social-icons {
+    display: flex;
+    justify-content: space-around;
+}
+ 
+.footer .footer-content .payment-methods {
+    display: flex;
+    justify-content: space-around;
+}
+.footer .footer-content .payment-methods div {
+    width: 50px;
+    height: 30px;
+    background-color: black;
+}
